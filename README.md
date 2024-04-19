@@ -1,6 +1,6 @@
 # Aero Firefox 🦊
 
-Bringing the Aero titlebar buttons from Windows Vista/7 to modern versions of Windows, complete with hover and active effects!
+Bringing the Aero titlebar buttons from Windows Vista/7 to modern versions of Firefox, complete with hover and active effects!
 
 Unsure if this supports any other operating systems, feel free to test any yourself.
 
