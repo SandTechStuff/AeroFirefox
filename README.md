@@ -1,5 +1,9 @@
 # Aero Firefox 🦊
 
+![GitHub Release](https://img.shields.io/github/v/release/SandTechStuff/AeroFirefox)
+![GitHub Release Date](https://img.shields.io/github/release-date/SandTechStuff/AeroFirefox)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SandTechStuff/AeroFirefox/total)
+
 Brings the Aero titlebar buttons from Windows Vista/7 to modern versions of Firefox, complete with hover and active effects!
 
 Unsure if this supports any other operating systems, feel free to test any yourself.
