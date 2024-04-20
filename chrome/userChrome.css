@@ -19,6 +19,7 @@
 	list-style-image: url("images/aeroCloseHover.png") !important;
 	width: fit-content !important;
 	height: fit-content !important;
+	filter: drop-shadow(0px 0px 5px rgb(255, 50 ,0)) !important;
 }
 
 .titlebar-close:active > .toolbarbutton-icon{
@@ -37,6 +38,7 @@
 	list-style-image: url("images/aeroMaxHover.png") !important;
 	width: fit-content !important;
 	height: fit-content !important;
+	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
 }
 
 .titlebar-max:active > .toolbarbutton-icon{
@@ -55,6 +57,7 @@
 	list-style-image: url("images/aeroMinHover.png") !important;
 	width: fit-content !important;
 	height: fit-content !important;
+	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
 }
 
 .titlebar-min:active > .toolbarbutton-icon{
@@ -73,6 +76,7 @@
 	list-style-image: url("images/aeroRestoreHover.png") !important;
 	width: fit-content !important;
 	height: fit-content !important;
+	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
 }
 
 .titlebar-restore:active > .toolbarbutton-icon{
