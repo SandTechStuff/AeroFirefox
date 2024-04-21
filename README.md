@@ -18,18 +18,12 @@ Install like any other Firefox CSS theme.
 5. Click `Open Folder` next to the root directory of your currently selected profile.
 6. Copy the `chrome` folder from this repository into your Firefox profile folder.
 
-|Firefox Version|Supported?|
-|:--------------|:--------:|
-|Latest         |✅        |
-|115esr         |✅        |
-
 |Operating System|Supported?  |
 |:---------------|:----------:|
 |Windows 11      |✅          |
 |Windows 10      |✅          |
 |MacOS           |Probably Not|
 |Linux           |Maybe       |
-
 
 ## Issues 🪲 | Feature Requests 📝
 
