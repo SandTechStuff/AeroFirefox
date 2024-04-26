@@ -22,7 +22,7 @@ Install like any other Firefox CSS theme.
 |:---------------|:----------:|
 |Windows 11      |✅          |
 |Windows 10      |✅          |
-|MacOS           |Probably Not|
+|MacOS           |❌          |
 |Linux           |Maybe       |
 
 ## Issues 🪲 | Feature Requests 📝
