@@ -9,78 +9,59 @@
 	padding-right: 4px !important;
 }
 
-.titlebar-close > .toolbarbutton-icon{
-	list-style-image: url("images/aeroClose.png") !important;
+.titlebar-close > .toolbarbutton-icon, .titlebar-close:hover > .toolbarbutton-icon, .titlebar-close:active > .toolbarbutton-icon, .titlebar-max > .toolbarbutton-icon, .titlebar-max:hover > .toolbarbutton-icon, .titlebar-max:active > .toolbarbutton-icon, .titlebar-min > .toolbarbutton-icon, .titlebar-min:hover > .toolbarbutton-icon, .titlebar-min:active > .toolbarbutton-icon, .titlebar-restore > .toolbarbutton-icon, .titlebar-restore:hover > .toolbarbutton-icon, .titlebar-restore:active > .toolbarbutton-icon{
 	width: fit-content !important;
 	height: fit-content !important;
 }
 
+.titlebar-close > .toolbarbutton-icon{
+	list-style-image: url("images/aeroClose.png") !important;
+}
+
 .titlebar-close:hover > .toolbarbutton-icon{
 	list-style-image: url("images/aeroCloseHover.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 	filter: drop-shadow(0px 0px 5px rgb(255, 50 ,0)) !important;
 }
 
 .titlebar-close:active > .toolbarbutton-icon{
 	list-style-image: url("images/aeroCloseActive.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 }
 
 .titlebar-max > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMax.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 }
 
 .titlebar-max:hover > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMaxHover.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
 }
 
 .titlebar-max:active > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMaxActive.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 }
 
 .titlebar-min > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMin.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 }
 
 .titlebar-min:hover > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMinHover.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
 }
 
 .titlebar-min:active > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMinActive.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 }
 
 .titlebar-restore > .toolbarbutton-icon{
 	list-style-image: url("images/aeroRestore.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 }
 
 .titlebar-restore:hover > .toolbarbutton-icon{
 	list-style-image: url("images/aeroRestoreHover.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
 }
 
 .titlebar-restore:active > .toolbarbutton-icon{
 	list-style-image: url("images/aeroRestoreActive.png") !important;
-	width: fit-content !important;
-	height: fit-content !important;
 }
