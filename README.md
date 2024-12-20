@@ -35,6 +35,8 @@ Feel free to post feature requests in issues.
 
 ## Screenshots 📷
 
+_Currently Outdated (Pre-2.0)_
+
 > Dark Mode
 ![image](/screenshots/screen1.png)
 
