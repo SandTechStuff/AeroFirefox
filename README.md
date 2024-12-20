@@ -4,9 +4,9 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/SandTechStuff/AeroFirefox)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SandTechStuff/AeroFirefox/total)
 
-##### I'll improve on this eventually, now that I know more about extracting images from msstyles files in Windows, and that people [seem to have interest.](https://www.reddit.com/r/browsers/comments/1d2el1h/are_there_any_modern_browsers_that_have_the/)
-
 Brings the Aero titlebar buttons from Windows Vista/7 to modern versions of Firefox, complete with hover and active effects!
+
+This theme uses images extracted from the official Windows 7 msstyles theme file, so the buttons are as accurate as possible (besides the hover glow).
 
 Unsure if this supports any other operating systems, feel free to test any yourself.
 
