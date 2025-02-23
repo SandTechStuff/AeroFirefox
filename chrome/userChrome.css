@@ -66,3 +66,8 @@
 .titlebar-restore:active > .toolbarbutton-icon{
 	list-style-image: url("images/aeroRestoreActive.png") !important;
 }
+
+.titlebar-button > .toolbarbutton-icon{
+	appearance: none;
+	background-color: transparent;
+}
