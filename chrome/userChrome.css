@@ -1,3 +1,7 @@
+.browser-titlebar{
+	--inactive-titlebar-opacity: 1 !important;
+}
+
 .titlebar-close, .titlebar-restore, .titlebar-min, .titlebar-max{
 	width: fit-content !important;
 	height: fit-content !important;
@@ -9,6 +13,51 @@
 	padding-right: 4px !important;
 }
 
+@media (-moz-bool-pref: "AeroFirefox.no-caption-padding"){
+	.titlebar-close{
+		padding-right: 0px !important;
+	}
+}
+
+@media (-moz-bool-pref: "AeroFirefox.transparency"){
+	#main-window, #navigator-toolbox{
+		background: transparent !important;
+	}
+	#browser{
+		background: black !important;
+	}
+}
+
+@media (-moz-bool-pref: "AeroFirefox.fix-borders"){
+	#navigator-toolbox{
+		margin-left: 8px !important;
+		margin-right: 8px !important;
+	}
+	
+	#tabbrowser-tabbox{
+		margin-left: 8px !important;
+		margin-bottom: 8px !important;
+		margin-right: 8px !important;
+	}
+	
+	html > body{
+		width: auto !important;
+		height: auto !important;
+		position: absolute !important;
+		top: 0px !important;
+		left: -8px !important;
+		right: -8px !important;
+		bottom: -8px !important;
+	
+	}
+	
+	@media not (-moz-bool-pref: "widget.windows.mica"){
+		html > body{
+			top: 1px !important;
+		}
+	}
+}
+
 .titlebar-close > .toolbarbutton-icon, .titlebar-close:hover > .toolbarbutton-icon, .titlebar-close:active > .toolbarbutton-icon, .titlebar-max > .toolbarbutton-icon, .titlebar-max:hover > .toolbarbutton-icon, .titlebar-max:active > .toolbarbutton-icon, .titlebar-min > .toolbarbutton-icon, .titlebar-min:hover > .toolbarbutton-icon, .titlebar-min:active > .toolbarbutton-icon, .titlebar-restore > .toolbarbutton-icon, .titlebar-restore:hover > .toolbarbutton-icon, .titlebar-restore:active > .toolbarbutton-icon{
 	width: fit-content !important;
 	height: fit-content !important;
@@ -17,6 +66,10 @@
 
 .titlebar-close > .toolbarbutton-icon{
 	list-style-image: url("images/aeroClose.png") !important;
+}
+
+.titlebar-close:-moz-window-inactive > .toolbarbutton-icon{
+	list-style-image: url("images/aeroCloseInactive.png") !important;
 }
 
 .titlebar-close:hover > .toolbarbutton-icon{
@@ -32,6 +85,10 @@
 	list-style-image: url("images/aeroMaximize.png") !important;
 }
 
+.titlebar-max:-moz-window-inactive > .toolbarbutton-icon{
+	list-style-image: url("images/aeroMaximizeInactive.png") !important;
+}
+
 .titlebar-max:hover > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMaximizeHover.png") !important;
 	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
@@ -45,6 +102,10 @@
 	list-style-image: url("images/aeroMinimize.png") !important;
 }
 
+.titlebar-min:-moz-window-inactive > .toolbarbutton-icon{
+	list-style-image: url("images/aeroMinimizeInactive.png") !important;
+}
+
 .titlebar-min:hover > .toolbarbutton-icon{
 	list-style-image: url("images/aeroMinimizeHover.png") !important;
 	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
@@ -56,6 +117,10 @@
 
 .titlebar-restore > .toolbarbutton-icon{
 	list-style-image: url("images/aeroRestore.png") !important;
+}
+
+.titlebar-restore:-moz-window-inactive > .toolbarbutton-icon{
+	list-style-image: url("images/aeroRestoreInactive.png") !important;
 }
 
 .titlebar-restore:hover > .toolbarbutton-icon{
