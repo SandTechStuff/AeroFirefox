@@ -8,18 +8,6 @@ Brings the Aero titlebar buttons from Windows Vista/7 to modern versions of Fire
 
 This theme uses images extracted from the official Windows 7 msstyles theme file, so the buttons are as accurate as possible (besides the hover glow).
 
-Unsure if this supports any other operating systems, feel free to test any yourself.
-
-## Installation 💾
-
-Install like any other Firefox CSS theme.
-1. Check for compatibility issues in the chart below.
-2. Open `about:config`
-3. Set `toolkit.legacyUserProfileCustomizations.stylesheets` to true
-4. Open `about:profiles`
-5. Click `Open Folder` next to the root directory of your currently selected profile.
-6. Copy the `chrome` folder from this repository into your Firefox profile folder.
-
 |Operating System|Supported?  |
 |:---------------|:----------:|
 |Windows 11      |✅          |
@@ -27,13 +15,17 @@ Install like any other Firefox CSS theme.
 |MacOS           |❌          |
 |Linux           |Maybe       |
 
-## Issues 🪲 | Feature Requests 📝
+## Installation
 
-Please, please, please bug me with any issues you find! I will try to fix them if possible and when I have the time.
+Install like any other Firefox CSS theme.
+1. Check for compatibility issues in the chart below.
+2. Open `about:config`
+3. Set `toolkit.legacyUserProfileCustomizations.stylesheets` to true.
+4. Open `about:profiles`
+5. Click `Open Folder` next to the root directory of your currently selected profile.
+6. Copy the `chrome` folder from this repository into your Firefox profile folder.
 
-Feel free to post feature requests in issues.
-
-## Screenshots 📷
+## Screenshots
 
 _Currently Outdated (Pre-2.0)_
 
