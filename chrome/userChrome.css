@@ -1,39 +1,25 @@
-.browser-titlebar{
-	--inactive-titlebar-opacity: 1 !important;
-}
-
-.titlebar-close, .titlebar-restore, .titlebar-min, .titlebar-max{
-	width: fit-content !important;
-	height: fit-content !important;
-	padding: 0px !important;
-	background-color: transparent !important;
-}
-
-.titlebar-close{
-	padding-right: 4px !important;
-}
-
-@media (-moz-bool-pref: "AeroFirefox.no-caption-padding"){
+@media -moz-pref("AeroFirefox.no-caption-padding"){
 	.titlebar-close{
 		padding-right: 0px !important;
 	}
 }
 
-@media (-moz-bool-pref: "AeroFirefox.transparency"){
+@media -moz-pref("AeroFirefox.transparency"){
 	#main-window, #navigator-toolbox{
 		background: transparent !important;
 	}
+
 	#browser{
 		background: black !important;
 	}
 
-	@media (-moz-bool-pref: "AeroFirefox.transparency.disable-when-maximized"){
+	@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
 		#main-window[sizemode="maximized"], #navigator-toolbox[sizemode="maximized"]{
 			background: var(--toolbox-bgcolor) !important;
 		}
 	}
 
-	@media (-moz-bool-pref: "AeroFirefox.transparent-toolbar"){
+	@media -moz-pref("AeroFirefox.transparency.transparent-toolbar"){
 		#nav-bar, #PersonalToolbar{
 			background: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent 25%) !important;
 		}
@@ -46,7 +32,30 @@
 			background: color-mix(in srgb, var(--tab-selected-bgcolor) 75%, transparent 25%) !important;
 		}
 
-		@media (-moz-bool-pref: "AeroFirefox.transparency.disable-when-maximized"){
+		@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
+			#nav-bar[sizemode="maximized"], #PersonalToolbar[sizemode="maximized"]{
+				background: var(--toolbar-bgcolor) !important;
+			}
+			#urlbar-background[sizemode="maximized"]{
+				background: var(--toolbar-field-background-color) !important;
+			}
+		}
+	}
+
+	@media -moz-pref("AeroFirefox.transparency.fully-transparent-toolbar"){
+		#nav-bar, #PersonalToolbar{
+			background: transparent !important;
+		}
+
+		#urlbar:not([focused=""]) > #urlbar-background{
+			background: color-mix(in srgb, var(--toolbar-field-background-color) 75%, transparent 25%) !important;
+		}
+
+		.tab-background[selected]{
+			background: color-mix(in srgb, var(--tab-selected-bgcolor) 75%, transparent 25%) !important;
+		}
+
+		@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
 			#nav-bar[sizemode="maximized"], #PersonalToolbar[sizemode="maximized"]{
 				background: var(--toolbar-bgcolor) !important;
 			}
@@ -57,7 +66,7 @@
 	}
 }
 
-@media (-moz-bool-pref: "AeroFirefox.fix-borders"){
+@media -moz-pref("AeroFirefox.fix-borders"){
 	#navigator-toolbox{
 		margin-left: 8px !important;
 		margin-right: 8px !important;
@@ -80,14 +89,14 @@
 	
 	}
 	
-	@media not (-moz-bool-pref: "widget.windows.mica"){
+	@media not -moz-pref("widget.windows.mica"){
 		html > body{
 			top: 1px !important;
 		}
 	}
 }
 
-@media (-moz-bool-pref: "AeroFirefox.fix-borders-experimental"){
+@media -moz-pref("AeroFirefox.fix-borders-experimental"){
 	#navigator-toolbox{
 		border-bottom: 0px !important;
 	}
@@ -105,6 +114,18 @@
 		padding-left: 14px !important;
 		padding-right: 14px !important;
 	}
+
+	@media -moz-pref("AeroFirefox.fix-borders-experimental.no-padding"){
+		#nav-bar, #toolbar-menubar{
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
+
+		#PersonalToolbar{
+			padding-left: 6px !important;
+			padding-right: 6px !important;
+		}
+	}
 	
 	#tabbrowser-tabbox{
 		margin-left: 8px !important;
@@ -123,33 +144,22 @@
 	
 	}
 	
-	@media not (-moz-bool-pref: "widget.windows.mica"){
+	@media not -moz-pref("widget.windows.mica"){
 		html > body{
 			top: 1px !important;
 		}
 	}
 }
 
-@media (-moz-bool-pref: "AeroFirefox.text-glow"){
+@media -moz-pref("AeroFirefox.text-glow"){
 	.tab-label-container{
-		overflow: visible !important;
-		position: relative !important;
-		width: 100% !important;
-		max-width: 100% !important;
-	}
-
-	.tabbrowser-tab[selected] .tab-text{
-		clip-path: inset(-9999px 20px -9999px -9999px) !important;
-		width: 100% !important;
-		max-width: 100% !important;
+		padding-left: 10px !important;
+		margin-left: -10px !important;
 	}
 
 	.tabbrowser-tab:not([selected]) .tab-text{
 		text-shadow: 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white !important;
-		clip-path: inset(-9999px 20px -9999px -9999px) !important;
 		color: black !important;
-		width: 100% !important;
-		max-width: 100% !important;
 	}
 
 	.menubar-text{
@@ -160,84 +170,129 @@
 	.menubar-text::before{
 		overflow: visible !important;
 	}
+
+	@media -moz-pref("AeroFirefox.transparency.fully-transparent-toolbar"){
+		.bookmark-item .toolbarbutton-text{
+			text-shadow: 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white !important;
+			color: black !important;
+		}
+		.bookmark-item .toolbarbutton-text::before{
+			padding: 10px !important;
+			margin: -10px !important;
+		}
+	}
+
+	@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
+		#main-window[sizemode="maximized"] .tabbrowser-tab:not([selected]) .tab-text{
+			text-shadow: none !important;
+			color: initial !important;
+		}
+
+		#main-window[sizemode="maximized"] .menubar-text{
+			text-shadow: none !important;
+			color: initial !important;
+		}
+
+		#main-window[sizemode="maximized"] .bookmark-item .toolbarbutton-text{
+			text-shadow: none !important;
+			color: initial !important;
+		}
+	}
 }
 
+@media not -moz-pref("AeroFirefox.disable-titlebar-buttons"){
+	.browser-titlebar{
+		--inactive-titlebar-opacity: 1 !important;
+	}
+	
+	.titlebar-close, .titlebar-restore, .titlebar-min, .titlebar-max{
+		width: fit-content !important;
+		height: fit-content !important;
+		padding: 0px !important;
+		background-color: transparent !important;
+		overflow: visible !important;
+	}
+	
+	.titlebar-close{
+		padding-right: 4px !important;
+	}
 
-.titlebar-close > .toolbarbutton-icon, .titlebar-close:hover > .toolbarbutton-icon, .titlebar-close:active > .toolbarbutton-icon, .titlebar-max > .toolbarbutton-icon, .titlebar-max:hover > .toolbarbutton-icon, .titlebar-max:active > .toolbarbutton-icon, .titlebar-min > .toolbarbutton-icon, .titlebar-min:hover > .toolbarbutton-icon, .titlebar-min:active > .toolbarbutton-icon, .titlebar-restore > .toolbarbutton-icon, .titlebar-restore:hover > .toolbarbutton-icon, .titlebar-restore:active > .toolbarbutton-icon{
-	width: fit-content !important;
-	height: fit-content !important;
-	transition: filter 0.1s ease !important;
-}
-
-.titlebar-close > .toolbarbutton-icon{
-	list-style-image: url("images/aeroClose.png") !important;
-}
-
-.titlebar-close:-moz-window-inactive > .toolbarbutton-icon{
-	list-style-image: url("images/aeroCloseInactive.png") !important;
-}
-
-.titlebar-close:hover > .toolbarbutton-icon{
-	list-style-image: url("images/aeroCloseHover.png") !important;
-	filter: drop-shadow(0px 0px 5px rgb(255, 65, 22)) !important;
-}
-
-.titlebar-close:active > .toolbarbutton-icon{
-	list-style-image: url("images/aeroCloseActive.png") !important;
-}
-
-.titlebar-max > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMaximize.png") !important;
-}
-
-.titlebar-max:-moz-window-inactive > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMaximizeInactive.png") !important;
-}
-
-.titlebar-max:hover > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMaximizeHover.png") !important;
-	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
-}
-
-.titlebar-max:active > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMaximizeActive.png") !important;
-}
-
-.titlebar-min > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMinimize.png") !important;
-}
-
-.titlebar-min:-moz-window-inactive > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMinimizeInactive.png") !important;
-}
-
-.titlebar-min:hover > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMinimizeHover.png") !important;
-	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
-}
-
-.titlebar-min:active > .toolbarbutton-icon{
-	list-style-image: url("images/aeroMinimizeActive.png") !important;
-}
-
-.titlebar-restore > .toolbarbutton-icon{
-	list-style-image: url("images/aeroRestore.png") !important;
-}
-
-.titlebar-restore:-moz-window-inactive > .toolbarbutton-icon{
-	list-style-image: url("images/aeroRestoreInactive.png") !important;
-}
-
-.titlebar-restore:hover > .toolbarbutton-icon{
-	list-style-image: url("images/aeroRestoreHover.png") !important;
-	filter: drop-shadow(0px 0px 5px rgb(0, 150, 255)) !important;
-}
-
-.titlebar-restore:active > .toolbarbutton-icon{
-	list-style-image: url("images/aeroRestoreActive.png") !important;
-}
-
-.titlebar-button > .toolbarbutton-icon{
-	appearance: none;
-	background-color: transparent;
+	.titlebar-close > .toolbarbutton-icon, .titlebar-close:hover > .toolbarbutton-icon, .titlebar-close:active > .toolbarbutton-icon, .titlebar-max > .toolbarbutton-icon, .titlebar-max:hover > .toolbarbutton-icon, .titlebar-max:active > .toolbarbutton-icon, .titlebar-min > .toolbarbutton-icon, .titlebar-min:hover > .toolbarbutton-icon, .titlebar-min:active > .toolbarbutton-icon, .titlebar-restore > .toolbarbutton-icon, .titlebar-restore:hover > .toolbarbutton-icon, .titlebar-restore:active > .toolbarbutton-icon{
+		width: fit-content !important;
+		height: fit-content !important;
+		transition: filter 0.05s linear !important;
+	}
+	
+	.titlebar-close > .toolbarbutton-icon{
+		list-style-image: url("images/aeroClose.png") !important;
+	}
+	
+	.titlebar-close:-moz-window-inactive > .toolbarbutton-icon{
+		list-style-image: url("images/aeroCloseInactive.png") !important;
+	}
+	
+	.titlebar-close:hover > .toolbarbutton-icon{
+		list-style-image: url("images/aeroCloseHover.png") !important;
+		filter: drop-shadow(0px 0px 4px rgb(255, 90, 65)) drop-shadow(0px 0px 4px rgb(255, 90, 65)) !important;
+	}
+	
+	.titlebar-close:active > .toolbarbutton-icon{
+		list-style-image: url("images/aeroCloseActive.png") !important;
+	}
+	
+	.titlebar-max > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMaximize.png") !important;
+	}
+	
+	.titlebar-max:-moz-window-inactive > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMaximizeInactive.png") !important;
+	}
+	
+	.titlebar-max:hover > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMaximizeHover.png") !important;
+		filter: drop-shadow(0px 0px 4px rgb(0, 220, 255)) drop-shadow(0px 0px 4px rgb(0, 220, 255)) !important;
+	}
+	
+	.titlebar-max:active > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMaximizeActive.png") !important;
+	}
+	
+	.titlebar-min > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMinimize.png") !important;
+	}
+	
+	.titlebar-min:-moz-window-inactive > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMinimizeInactive.png") !important;
+	}
+	
+	.titlebar-min:hover > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMinimizeHover.png") !important;
+		filter: drop-shadow(0px 0px 4px rgb(0, 220, 255)) drop-shadow(0px 0px 4px rgb(0, 220, 255)) !important;
+	}
+	
+	.titlebar-min:active > .toolbarbutton-icon{
+		list-style-image: url("images/aeroMinimizeActive.png") !important;
+	}
+	
+	.titlebar-restore > .toolbarbutton-icon{
+		list-style-image: url("images/aeroRestore.png") !important;
+	}
+	
+	.titlebar-restore:-moz-window-inactive > .toolbarbutton-icon{
+		list-style-image: url("images/aeroRestoreInactive.png") !important;
+	}
+	
+	.titlebar-restore:hover > .toolbarbutton-icon{
+		list-style-image: url("images/aeroRestoreHover.png") !important;
+		filter: drop-shadow(0px 0px 5px rgb(0, 235, 255)) drop-shadow(0px 0px 5px rgb(0, 235, 255)) !important;
+	}
+	
+	.titlebar-restore:active > .toolbarbutton-icon{
+		list-style-image: url("images/aeroRestoreActive.png") !important;
+	}
+	
+	.titlebar-button > .toolbarbutton-icon{
+		appearance: none;
+		background-color: transparent;
+	}
 }
