@@ -1,9 +1,3 @@
-@media -moz-pref("AeroFirefox.no-caption-padding"){
-	.titlebar-close{
-		padding-right: 0px !important;
-	}
-}
-
 @media -moz-pref("AeroFirefox.transparency"){
 	#main-window, #navigator-toolbox{
 		background: transparent !important;
@@ -200,10 +194,11 @@
 	}
 }
 
+.browser-titlebar{
+	--inactive-titlebar-opacity: 1 !important;
+}
+
 @media not -moz-pref("AeroFirefox.disable-titlebar-buttons"){
-	.browser-titlebar{
-		--inactive-titlebar-opacity: 1 !important;
-	}
 	
 	.titlebar-close, .titlebar-restore, .titlebar-min, .titlebar-max{
 		width: fit-content !important;
@@ -212,9 +207,11 @@
 		background-color: transparent !important;
 		overflow: visible !important;
 	}
-	
-	.titlebar-close{
-		padding-right: 4px !important;
+
+	@media not -moz-pref("AeroFirefox.no-caption-padding"){
+		.titlebar-close{
+			padding-right: 4px !important;
+		}
 	}
 
 	.titlebar-close > .toolbarbutton-icon, .titlebar-close:hover > .toolbarbutton-icon, .titlebar-close:active > .toolbarbutton-icon, .titlebar-max > .toolbarbutton-icon, .titlebar-max:hover > .toolbarbutton-icon, .titlebar-max:active > .toolbarbutton-icon, .titlebar-min > .toolbarbutton-icon, .titlebar-min:hover > .toolbarbutton-icon, .titlebar-min:active > .toolbarbutton-icon, .titlebar-restore > .toolbarbutton-icon, .titlebar-restore:hover > .toolbarbutton-icon, .titlebar-restore:active > .toolbarbutton-icon{
