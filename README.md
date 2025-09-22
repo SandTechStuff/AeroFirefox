@@ -5,7 +5,7 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SandTechStuff/AeroFirefox/total)
 
 > [!WARNING]
-> The latest release no longer works on Firefox 141+
+> The latest release no longer works on Firefox 141 and over.
 > If you want to use the theme on newer versions, download it from the [3.0-test](https://github.com/SandTechStuff/AeroFirefox/tree/3.0-test) branch.
 
 Brings the Aero titlebar buttons from Windows Vista/7 to modern versions of Firefox, complete with hover and active effects!
