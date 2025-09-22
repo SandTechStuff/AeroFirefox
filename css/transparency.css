@@ -1,0 +1,159 @@
+@media -moz-pref("AeroFirefox.transparency"){
+	#main-window, #navigator-toolbox{
+		background: transparent !important;
+	}
+
+	#browser{
+		background: black !important;
+	}
+
+	@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
+		#main-window[sizemode="maximized"], #navigator-toolbox[sizemode="maximized"]{
+			background: var(--toolbox-bgcolor) !important;
+		}
+	}
+
+	@media -moz-pref("AeroFirefox.transparency.transparent-toolbar"){
+		#nav-bar, #PersonalToolbar{
+			background: color-mix(in srgb, var(--toolbar-bgcolor) 75%, transparent 25%) !important;
+		}
+
+		#urlbar:not([focused=""]) > #urlbar-background{
+			background: color-mix(in srgb, var(--toolbar-field-background-color) 75%, transparent 25%) !important;
+		}
+
+		.tab-background[selected]{
+			background: color-mix(in srgb, var(--tab-selected-bgcolor) 75%, transparent 25%) !important;
+		}
+
+		@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
+			#nav-bar[sizemode="maximized"], #PersonalToolbar[sizemode="maximized"]{
+				background: var(--toolbar-bgcolor) !important;
+			}
+			#urlbar-background[sizemode="maximized"]{
+				background: var(--toolbar-field-background-color) !important;
+			}
+		}
+	}
+
+	@media -moz-pref("AeroFirefox.transparency.fully-transparent-toolbar"){
+		#nav-bar, #PersonalToolbar{
+			background: transparent !important;
+		}
+
+		#urlbar:not([focused=""]) > #urlbar-background{
+			background: color-mix(in srgb, var(--toolbar-field-background-color) 75%, transparent 25%) !important;
+		}
+
+		.tab-background[selected]{
+			background: color-mix(in srgb, var(--tab-selected-bgcolor) 75%, transparent 25%) !important;
+		}
+
+		@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
+			#nav-bar[sizemode="maximized"], #PersonalToolbar[sizemode="maximized"]{
+				background: var(--toolbar-bgcolor) !important;
+			}
+			#urlbar-background[sizemode="maximized"]{
+				background: var(--toolbar-field-background-color) !important;
+			}
+		}
+	}
+}
+
+@media -moz-pref("AeroFirefox.text-glow"){
+	.tab-label-container{
+		padding-left: 10px !important;
+		margin-left: -10px !important;
+	}
+
+	.tabbrowser-tab:not([selected]) .tab-text{
+		text-shadow: 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white !important;
+		color: black !important;
+	}
+
+	.menubar-text{
+		text-shadow: 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white !important;
+		color: black !important;
+		&::before{
+			overflow: visible !important;
+		}
+	}
+
+	@media -moz-pref("AeroFirefox.transparency.fully-transparent-toolbar"){
+		.bookmark-item .toolbarbutton-text{
+			text-shadow: 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white !important;
+			color: black !important;
+			&::before{
+				padding: 10px !important;
+				margin: -10px !important;
+			}
+		}
+	}
+
+	@media -moz-pref("AeroFirefox.transparency.disable-when-maximized"){
+		#main-window[sizemode="maximized"] .tabbrowser-tab:not([selected]) .tab-text{
+			text-shadow: none !important;
+			color: initial !important;
+		}
+
+		#main-window[sizemode="maximized"] .menubar-text{
+			text-shadow: none !important;
+			color: initial !important;
+		}
+
+		#main-window[sizemode="maximized"] .bookmark-item .toolbarbutton-text{
+			text-shadow: none !important;
+			color: initial !important;
+		}
+	}
+}
+
+@media -moz-pref("AeroFirefox.remove-navbar-borders"){
+	#navigator-toolbox{
+		border-bottom: 0px !important;
+	}
+
+	#nav-bar{
+		border-top: 0px !important;
+	}
+}
+
+@media -moz-pref("AeroFirefox.fix-borders"){
+	#TabsToolbar, #nav-bar, #toolbar-menubar{
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+	}
+
+	#PersonalToolbar{
+		padding-left: 14px !important;
+		padding-right: 14px !important;
+	}
+
+	@media -moz-pref("AeroFirefox.fix-borders.no-padding"){
+		#nav-bar, #toolbar-menubar{
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
+
+		#PersonalToolbar{
+			padding-left: 6px !important;
+			padding-right: 6px !important;
+		}
+	}
+	
+	#tabbrowser-tabbox{
+		margin-left: 8px !important;
+		margin-bottom: 8px !important;
+		margin-right: 8px !important;
+	}
+	
+	html > body{
+		width: auto !important;
+		height: auto !important;
+		position: absolute !important;
+		top: 0px !important;
+		left: -8px !important;
+		right: -8px !important;
+		bottom: -8px !important;
+	}
+}
