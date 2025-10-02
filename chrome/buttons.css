@@ -1,12 +1,19 @@
-@media not -moz-pref("AeroFirefox.disable-titlebar-buttons"){
-	
-	@media not -moz-pref("AeroFirefox.no-caption-padding"){
-		.titlebar-close{
+* {
+	--animation-duration: 0.1s;
+}
+
+@media not -moz-pref("AeroFirefox.disable-titlebar-buttons") {
+
+	@media not -moz-pref("AeroFirefox.no-caption-padding") {
+		.titlebar-close {
 			padding-right: 4px !important;
 		}
 	}
 
-	.titlebar-close, .titlebar-max, .titlebar-min, .titlebar-restore{
+	.titlebar-close,
+	.titlebar-max,
+	.titlebar-min,
+	.titlebar-restore {
 		content: unset !important;
 		width: fit-content !important;
 		height: fit-content !important;
@@ -14,88 +21,183 @@
 		transition: filter 0.05s linear !important;
 	}
 
-	@media not -moz-pref("widget.windows.mica"){
-		.titlebar-close, .titlebar-max, .titlebar-min, .titlebar-restore{
-			margin-top: 1px !important;
-		}
-	}
-	
-	.titlebar-close{
-		background: no-repeat url("images/aeroClose.png") !important;
-		width: 49px !important;
-		height: 20px !important;
-		&:-moz-window-inactive{
-			background: no-repeat url("images/aeroCloseInactive.png") !important;
-		}
-		&:hover{
-			background: no-repeat url("images/aeroCloseHover.png") !important;
-			filter: drop-shadow(0px 0px 4px rgb(252, 129, 99)) drop-shadow(0px 0px 3px rgb(252, 129, 99)) drop-shadow(0px 0px 1px rgb(252, 129, 99)) !important;
-		}
-		&:active{
-			background: no-repeat url("images/aeroCloseActive.png") !important;
+	@media not -moz-pref("widget.windows.mica") {
+
+		#main-window[sizemode="normal"] {
+
+			.titlebar-close,
+			.titlebar-max,
+			.titlebar-min,
+			.titlebar-restore {
+				margin-top: 1px !important;
+			}
 		}
 	}
 
-	.titlebar-max, .titlebar-restore{
+	.titlebar-close {
+		background: no-repeat url("images/aeroClose.png") !important;
+		width: 49px !important;
+		height: 20px !important;
+
+		&:-moz-window-inactive {
+			background: no-repeat url("images/aeroCloseInactive.png") !important;
+		}
+
+		&:hover {
+			::before {
+				opacity: 1 !important;
+			}
+		}
+
+		&:active {
+			::before {
+				background: no-repeat url("images/aeroCloseActive.png") !important;
+				transition: none !important;
+			}
+		}
+
+		.toolbarbutton-text {
+			display: block !important;
+		}
+
+		::before {
+			content: "" !important;
+			display: block !important;
+			width: 49px !important;
+			height: 20px !important;
+			background: no-repeat url("images/aeroCloseHover.png") !important;
+			filter: drop-shadow(0px 0px 4px rgb(252, 129, 99)) drop-shadow(0px 0px 3px rgb(252, 129, 99)) drop-shadow(0px 0px 1px rgb(252, 129, 99)) !important;
+			opacity: 0 !important;
+			transition: opacity var(--animation-duration) linear !important;
+		}
+	}
+
+	.titlebar-max,
+	.titlebar-restore {
 		width: 27px !important;
 		height: 20px !important;
 	}
 
-	.titlebar-min{
+	.titlebar-min {
 		width: 29px !important;
 		height: 20px !important;
 	}
-	
-	.titlebar-max{
+
+	.titlebar-max {
 		background: no-repeat url("images/aeroMaximize.png") !important;
-		&:-moz-window-inactive{
+
+		&:-moz-window-inactive {
 			background: no-repeat url("images/aeroMaximizeInactive.png") !important;
 		}
-		&:hover{
+
+		&:hover {
+			::before {
+				opacity: 1 !important;
+			}
+		}
+
+		&:active {
+			::before {
+				background: no-repeat url("images/aeroMaximizeActive.png") !important;
+				transition: none !important;
+			}
+
+		}
+
+		.toolbarbutton-text {
+			display: block !important;
+		}
+
+		::before {
+			content: "";
+			display: block;
+			width: 27px !important;
+			height: 20px !important;
 			background: no-repeat url("images/aeroMaximizeHover.png") !important;
 			filter: drop-shadow(0px 0px 4px rgb(98, 206, 252)) drop-shadow(0px 0px 3px rgb(98, 206, 252)) drop-shadow(0px 0px 1px rgb(98, 206, 252)) !important;
-		}
-		&:active{
-			background: no-repeat url("images/aeroMaximizeActive.png") !important;
+			opacity: 0 !important;
+			transition: opacity var(--animation-duration) linear !important;
 		}
 	}
-	
-	.titlebar-min{
+
+	.titlebar-min {
 		background: no-repeat url("images/aeroMinimize.png") !important;
-		&:-moz-window-inactive{
+
+		&:-moz-window-inactive {
 			background: no-repeat url("images/aeroMinimizeInactive.png") !important;
 		}
-		&:hover{
+
+		&:hover {
+			::before {
+				opacity: 1 !important;
+			}
+		}
+
+		&:active {
+			::before {
+				background: no-repeat url("images/aeroMinimizeActive.png") !important;
+				transition: none !important;
+			}
+		}
+
+		.toolbarbutton-text {
+			display: block !important;
+		}
+
+		::before {
+			content: "";
+			display: block;
+			width: 29px !important;
+			height: 20px !important;
 			background: no-repeat url("images/aeroMinimizeHover.png") !important;
 			filter: drop-shadow(0px 0px 4px rgb(98, 206, 252)) drop-shadow(0px 0px 3px rgb(98, 206, 252)) drop-shadow(0px 0px 1px rgb(98, 206, 252)) !important;
-		}
-		&:active{
-			background: no-repeat url("images/aeroMinimizeActive.png") !important;
+			opacity: 0 !important;
+			transition: opacity var(--animation-duration) linear !important;
 		}
 	}
-	
-	.titlebar-restore{
+
+	.titlebar-restore {
 		background: no-repeat url("images/aeroRestore.png") !important;
-		&:-moz-window-inactive{
+
+		&:-moz-window-inactive {
 			background: no-repeat url("images/aeroRestoreInactive.png") !important;
 		}
-		&:hover{
+
+		&:hover {
+			::before {
+				opacity: 1 !important;
+			}
+		}
+
+		&:active {
+			::before {
+				background: no-repeat url("images/aeroRestoreActive.png") !important;
+				transition: none !important;
+			}
+		}
+
+		.toolbarbutton-text {
+			display: block !important;
+		}
+
+		::before {
+			content: "";
+			display: block;
+			width: 27px !important;
+			height: 20px !important;
 			background: no-repeat url("images/aeroRestoreHover.png") !important;
 			filter: drop-shadow(0px 0px 4px rgb(98, 206, 252)) drop-shadow(0px 0px 3px rgb(98, 206, 252)) drop-shadow(0px 0px 1px rgb(98, 206, 252)) !important;
-		}
-		&:active{
-			background: no-repeat url("images/aeroRestoreActive.png") !important;
+			opacity: 0;
+			transition: opacity var(--animation-duration) linear !important;
 		}
 	}
-	
+
 	/* Linux fix */
-	.titlebar-button{
+	.titlebar-button {
 		appearance: none;
 	}
 }
 
-.browser-titlebar{
+.browser-titlebar {
 	--inactive-titlebar-opacity: 1 !important;
 }
-
-
