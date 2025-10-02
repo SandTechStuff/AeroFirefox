@@ -1,4 +1,4 @@
-# Aero Firefox 🦊
+# Aero Firefox
 
 ![GitHub Release](https://img.shields.io/github/v/release/SandTechStuff/AeroFirefox)
 ![GitHub Release Date](https://img.shields.io/github/release-date/SandTechStuff/AeroFirefox)
