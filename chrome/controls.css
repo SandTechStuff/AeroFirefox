@@ -1,0 +1,192 @@
+@media -moz-pref("AeroFirefox.aero-travel") {
+
+	#back-button,
+	#forward-button {
+		position: relative !important;
+		width: 25px !important;
+		height: 25px !important;
+		opacity: 1 !important;
+		padding: 0px !important;
+		align-self: center !important;
+	}
+
+	#back-button {
+		margin-left: 10px !important;
+		margin-right: 3px !important;
+		background-image: url(images/backNormal.png) !important;
+
+		&[disabled="true"] {
+			background-image: url(images/backDisabled.png) !important;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 25px !important;
+			height: 25px !important;
+			background: url(images/backHover.png);
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		&:not([disabled="true"]) {
+			&::after {
+				transition: opacity 0.25s linear;
+			}
+
+			&:hover {
+				&::after {
+					opacity: 1;
+				}
+			}
+
+			&:active {
+				&::after {
+					background: url(images/backPressed.png);
+					transition: none;
+				}
+			}
+		}
+
+		image {
+			display: none !important;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			background: url(images/travelBand.png);
+			width: 57px;
+			height: 27px;
+			left: -2px;
+			pointer-events: none;
+
+		}
+	}
+
+	#forward-button {
+
+		background-image: url(images/forwardNormal.png) !important;
+
+		&[disabled="true"] {
+			background-image: url(images/forwardDisabled.png) !important;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 25px !important;
+			height: 25px !important;
+			background: url(images/forwardHover.png);
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		&:not([disabled="true"]) {
+			&::after {
+				transition: opacity 0.25s linear;
+			}
+
+			&:hover {
+				&::after {
+					opacity: 1;
+				}
+			}
+
+			&:active {
+				&::after {
+					background: url(images/forwardPressed.png);
+					transition: none;
+				}
+			}
+		}
+
+		image {
+			display: none !important;
+		}
+	}
+}
+
+@media -moz-pref("AeroFirefox.custom-stop-reload") {
+
+	#stop-reload-button {
+		margin-left: 4px !important;
+		width: 24px !important;
+		height: 24px !important;
+		display: flex !important;
+		align-self: center !important;
+		justify-self: center !important;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 24px !important;
+			height: 24px !important;
+			opacity: 0;
+			pointer-events: none;
+			background: url(images/buttonHover.png);
+			transition: opacity 0.25s linear;
+		}
+
+		&:hover {
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		&:active {
+			&::after {
+				background: url(images/buttonPressed.png);
+				transition: none;
+			}
+
+			&:hover {
+				#reload-button {
+					margin-left: 1px !important;
+				}
+
+				#stop-button {
+					margin-left: 1px !important;
+				}
+			}
+		}
+
+		#reload-button {
+			list-style-image: url(images/refresh.png) !important;
+
+			padding: 0px !important;
+			width: 24px !important;
+			height: 24px !important;
+
+			.toolbarbutton-icon {
+				padding: 0px !important;
+				border-radius: 0px !important;
+				outline: none !important;
+				width: 16px !important;
+				height: 15px !important;
+				background: none !important;
+			}
+		}
+
+		#stop-button {
+			list-style-image: url(images/stop.png) !important;
+
+			padding: 0px !important;
+			width: 24px !important;
+			height: 24px !important;
+
+			.toolbarbutton-icon {
+				padding: 0px !important;
+				border-radius: 0px !important;
+				outline: none !important;
+				width: 12px !important;
+				height: 14px !important;
+				background: none !important;
+			}
+		}
+
+		.toolbarbutton-animatable-box {
+			display: none !important;
+		}
+	}
+}
